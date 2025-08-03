@@ -1,0 +1,304 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rakshit">
+    <meta name="description" content="Rakshit's complete academic profile">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakshit's Profile</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f6fc;
+            animation: fadeIn 1s ease-in;
+        }
+
+        header, footer {
+            background-color: #003366;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            position: relative;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #005599;
+            border-radius: 5px;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            color: black;
+            top: 40px;
+            min-width: 150px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            z-index: 10;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #eee;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            animation: slideIn 0.7s ease;
+        }
+
+        h1, h2 {
+            margin: 0 0 15px;
+        }
+
+        figure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #444;
+            padding: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        textarea {
+            resize: vertical;
+            padding: 10px;
+        }
+
+        button {
+            background-color: #003366;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005599;
+        }
+
+        address {
+            font-style: normal;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Rakshit's Academic Profile</h1>
+    <nav>
+        <a href="#about">About</a>
+        <div class="dropdown">
+            <a href="#">Education ▾</a>
+            <div class="dropdown-content">
+                <a href="#school">School</a>
+                <a href="#college">College</a>
+            </div>
+        </div>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <section id="about">
+        <h2>👋 About Me</h2>
+        <p>Hello! I'm <strong>Rakshit</strong>, a student who has completed 12th grade from <em>Paavai Vidhyashram</em>.</p>
+        <figure>
+            <img src="rakshitimage.jpeg" alt="Rakshit's photo">
+            <figcaption>Rakshit - Student</figcaption>
+        </figure>
+    </section>
+
+    <section id="school">
+        <h2>📚 School Education</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Class</th>
+                    <th>School</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10th</td>
+                    <td>Trinity School</td>
+                    <td>2023</td>
+                </tr>
+                <tr>
+                    <td>12th</td>
+                    <td>Paavai Vidhyashram</td>
+                    <td>2025</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="college">
+        <h2>🏫 Future College</h2>
+        <p>I am excited to join <mark>Sri Krishna College of Engineering and Technology</mark> for my undergraduate degree.</p>
+        <details>
+            <summary>Why I chose this college</summary>
+            <p>Sri Krishna College offers outstanding academic support, modern infrastructure, and excellent placement opportunities in the field of engineering.</p>
+        </details>
+    </section>
+
+    <section id="contact">
+        <h2>📞 Contact Details</h2>
+        <address>
+            Email: <a href="mailto:rakshitreddy81@gmail.com">rakshitreddy81@gmail.com</a><br>
+            Phone: <a href="tel:+919944564047">+91 9944564047</a>
+        </address>
+        <form>
+            <label for="message">Send me a message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Rakshit. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+<section id="tech-stack">
+    <h2>💻 Technical Interests</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+
+        <!-- Frontend -->
+        <div style="background-color: #ffe0b2; padding: 20px;  text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+            <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Frontend Icon" style="width: 60px; margin-bottom: 10px;">
+            <h3>Frontend</h3>
+            <ul style="list-style: none; padding: 0; text-align: left;">
+                <li>HTML5 with semantic elements</li>
+                <li>CSS3, Flexbox & Grid</li>
+                <li>JavaScript (ES6+)</li>
+                <li>React.js (Learning)</li>
+                <li>Bootstrap & Tailwind CSS</li>
+                <li>DOM Manipulation</li>
+                <li>Media Queries (Responsive Design)</li>
+            </ul>
+        </div>
+
+        <!-- Backend -->
+        <div style="background-color: #c8e6c9; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+            <img src="https://cdn-icons-png.flaticon.com/512/2721/2721297.png" alt="Backend Icon" style="width: 60px; margin-bottom: 10px;">
+            <h3>Backend</h3>
+            <ul style="list-style: none; padding: 0; text-align: left;">
+                <li>Node.js (Exploring)</li>
+                <li>Express.js</li>
+                <li>Python (Basics)</li>
+                <li>MySQL & MongoDB</li>
+                <li>RESTful APIs</li>
+                <li>Postman for API testing</li>
+                <li>Basic Authentication (JWT)</li>
+            </ul>
+        </div>
+
+        <!-- Development -->
+        <div style="background-color: #e1f5fe; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Development Icon" style="width: 60px; margin-bottom: 10px;">
+            <h3>Development Tools</h3>
+            <ul style="list-style: none; padding: 0; text-align: left;">
+                <li>Git & GitHub</li>
+                <li>Visual Studio Code</li>
+                <li>Chrome DevTools</li>
+                <li>Live Server (VS Code Extension)</li>
+                <li>Basic Linux Terminal Usage</li>
+                <li>Debugging & Version Control</li>
+                <li>Project-based Learning</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
